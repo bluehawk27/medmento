@@ -8,9 +8,9 @@ module Api
       end
 
       def create
-        @user = Event.create(event_params)
-        respond_with @user do |format|
-          format.json { render json: @user.to_json }
+        @event = Event.create(event_params)
+        respond_with @event do |format|
+          format.json { render json: @event.to_json }
         end
       end
 
