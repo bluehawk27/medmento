@@ -31,6 +31,7 @@ gem 'capybara'
 gem 'shoulda-matchers'
 gem 'factory_girl'
 gem 'rails_12factor'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

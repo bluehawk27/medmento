@@ -4,15 +4,10 @@ module Api
       respond_to :json
 
       def create
-        p params
-        p "create" * 10
-        p user_params
         @user = User.create(user_params)
         respond_with @user do |format|
           format.json { render json: @user.to_json }
-          p "createdddddd" * 10
         end
-        p "out of created" * 10
       end
 
       def show
