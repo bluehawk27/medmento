@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
   root "application#index"
 
+
+  get 'appointmentreminder/index' => 'appointmentreminder#index'
+  post 'appointmentreminder/makecall' => 'appointmentreminder#makecall'
+  post 'appointmentreminder/reminder' => 'appointmentreminder#reminder'
+  get 'appointmentreminder/test' => "appointmentreminder#test"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

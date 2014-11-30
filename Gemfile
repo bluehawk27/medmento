@@ -27,13 +27,18 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'faker',        group: :development
 gem 'pry',        group: :development
-gem 'rspec-rails'
-gem 'capybara'
-gem 'shoulda-matchers'
-gem 'factory_girl'
+gem 'rspec-rails', group: :test
+gem 'capybara', group: :test
+gem 'shoulda-matchers', group: :test
+gem 'factory_girl', group: :test
 gem 'rails_12factor'
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'twilio-ruby'
+gem 'whenever', :require => false
+gem 'quiet_assets', group: :development
+gem 'httparty', :groups => [:test, :development]
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
