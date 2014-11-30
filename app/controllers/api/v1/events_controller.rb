@@ -28,7 +28,7 @@ module Api
 
       private
       def event_params
-        params.require(:event).permit(:name, :drug_name, :message, :patient_number, :secondary_number, :third_number, :start_date, :end_date, :alert_time)
+        params.permit(:name, :drug_name, :message, :patient_number, :secondary_number, :third_number, :start_date, :end_date, :alert_time)
       end
     end
   end
