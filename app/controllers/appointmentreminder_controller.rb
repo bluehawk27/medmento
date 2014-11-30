@@ -15,12 +15,9 @@ class AppointmentreminderController < ApplicationController
 
 end
 
+# BASE_URL = "http://2c253d0d.ngrok.com/appointmentreminder"
 
-# ACCOUNT_SID="AC5428194410466ab7215049721a011efb"
-# ACCOUNT_TOKEN="53851fd334328db84eb45d2ce895977b"
-BASE_URL = "http://2c253d0d.ngrok.com/appointmentreminder"
-
-CALLER_NUM = '+14083735458'
+# CALLER_NUM = '+14083735458'
 # data = {
 #       :from => CALLER_NUM,
 #       :to => '+17034709608',
