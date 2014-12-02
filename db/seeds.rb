@@ -18,5 +18,5 @@ b = ClockworkEvent.create(
       patient_number: "111-111-1111",
       frequency_quantity: 1,
       frequency_period_id: 1,
-      at: "23:00"
+      at: "10:51"
   )

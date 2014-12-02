@@ -6,17 +6,15 @@ require 'clockwork/database_events'
 
 module Clockwork
 
-  every(1.minutes, "twilio_call.job") { TwilioWorker.perform_async }
 
 
-  # p "yo"
-  # p Clockwork.manager = Events::Manager.new
-  # p "mo"
-  # sync_database_events model: ClockworkEvent, every: 1.minute do |model_instance|
+  Clockwork.manager = DatabaseEvents::Manager.new
+  sync_database_events model: ClockworkEvent, every: 1.minute do |model_instance|
 
-  #   p "no"
-  #   TwilioWorker.perform_async
-  # end
+    if frequency == Time.now
+    TwilioWorker.perform_async(model_instance.phone)
+  end
 
 
 end
+  # every(1.minutes, "twilio_call.job") { TwilioWorker.perform_async }
