@@ -1,17 +1,20 @@
 class CreateEvents < ActiveRecord::Migration
   def change
     create_table :events do |t|
-      t.string :name
+      t.string :patient_name
       t.string :drug_name
       t.string :message
       t.string :patient_number
-      t.string :secondary_number
-      t.string :third_number
-      t.date :start_date
-      t.date :end_date
-      t.datetime :alert_time
+
+
+      # clockwork fields
+      t.integer :frequency_quantity
+      t.references :frequency_period
+      t.string :at
 
       t.timestamps
     end
+
+    add_index :events, :frequency_period_id
   end
 end

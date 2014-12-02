@@ -11,21 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128221047) do
+ActiveRecord::Schema.define(version: 20141202062853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: true do |t|
-    t.string   "name"
+    t.string   "patient_name"
     t.string   "drug_name"
     t.string   "message"
     t.string   "patient_number"
-    t.string   "secondary_number"
-    t.string   "third_number"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.datetime "alert_time"
+    t.integer  "frequency_quantity"
+    t.integer  "frequency_period_id"
+    t.string   "at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["frequency_period_id"], name: "index_events_on_frequency_period_id", using: :btree
+
+  create_table "frequency_periods", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
