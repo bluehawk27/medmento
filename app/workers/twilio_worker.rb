@@ -12,9 +12,7 @@ class TwilioWorker
       "url" => BASE_URL + '/reminder',
     }
 
-    p "*" * 70
     client = Twilio::REST::Client.new(ENV["ACCOUNT_SID"], ENV["AUTH_TOKEN"])
-    p "*" * 70
     client.account.calls.create(data)
     p "*" * 70
   end
