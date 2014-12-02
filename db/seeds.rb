@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 a = User.create(first_name: "Kevin", last_name: "Chen", email: "yolo@yolo.com")
 
-[:second, :minute, :hour, :day, :week, :month].each do |period|
+[:hour, :day, :week, :month].each do |period|
   FrequencyPeriod.create(name: period)
 end
 
@@ -17,6 +17,6 @@ b = Event.create(
       message: "Love you!",
       patient_number: "111-111-1111",
       frequency_quantity: 1,
-      frequency_period: 2,
+      frequency_period_id: 1,
       at: "23:00"
   )
