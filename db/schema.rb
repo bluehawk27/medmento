@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141202062853) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "events", force: true do |t|
+  create_table "clockwork_events", force: true do |t|
     t.string   "patient_name"
     t.string   "drug_name"
     t.string   "message"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20141202062853) do
     t.datetime "updated_at"
   end
 
-  add_index "events", ["frequency_period_id"], name: "index_events_on_frequency_period_id", using: :btree
+  add_index "clockwork_events", ["frequency_period_id"], name: "index_clockwork_events_on_frequency_period_id", using: :btree
 
   create_table "frequency_periods", force: true do |t|
     t.string   "name"

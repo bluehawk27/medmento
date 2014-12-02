@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
 
   namespace :api ,defaults: {format: 'json'}do
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   root "application#index"
+  mount Sidekiq::Web => '/sidekiq'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

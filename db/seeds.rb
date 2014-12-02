@@ -11,7 +11,7 @@ a = User.create(first_name: "Kevin", last_name: "Chen", email: "yolo@yolo.com")
   FrequencyPeriod.create(name: period)
 end
 
-b = Event.create(
+b = ClockworkEvent.create(
       patient_name: "Grandpa",
       drug_name: "Prozac",
       message: "Love you!",
