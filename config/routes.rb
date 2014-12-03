@@ -7,13 +7,18 @@ Rails.application.routes.draw do
   namespace :api ,defaults: {format: 'json'}do
     namespace :v1 do
       resources :users, only: [:create,:show,:update,:destroy]
-      resources :events, only: [:index,:create,:show,:update,:destroy]
+      resources :clockwork_events, only: [:index,:create,:show,:update,:destroy]
     end
   end
 
   root "application#index"
 
   post 'webhooks/reminder' => 'webhooks#reminder'
+
+  post 'webhooks/directions' => 'webhooks#directions'
+
+  post 'webhooks/log_pain' => 'webhooks#log_pain'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
