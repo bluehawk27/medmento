@@ -22,6 +22,15 @@ a = ClockworkEvent.create(
       frequency_period_id: 1,
   )
 
+z = ClockworkEvent.create(
+      patient_name: "Juan",
+      drug_name: "Prozac",
+      message: "Love you!",
+      patient_number: "5044916041",
+      frequency_quantity: 90,
+      frequency_period_id: 1,
+  )
+
 # #  These work
 # b = ClockworkEvent.create(
 #       patient_name: "Grandpa",
