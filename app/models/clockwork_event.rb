@@ -1,6 +1,7 @@
 class ClockworkEvent < ActiveRecord::Base
   belongs_to :user
   belongs_to :frequency_period
+  has_many :pain_ratings
   # attr_accessible :frequency_quantity, :frequency_period_id, :at
 
   # Used by clockwork to schedule how frequently this event should be run
