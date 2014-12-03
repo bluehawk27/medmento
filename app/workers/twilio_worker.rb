@@ -1,19 +1,18 @@
 class TwilioWorker
   include Sidekiq::Worker
 
-  BASE_URL = "http://2c253d0d.ngrok.com/appointmentreminder"
+  BASE_URL = "http://7b6048b8.ngrok.com/webhooks"
   # BASE_URL = "http://localhost:3000/appointmentreminder"
   CALLER_NUM = '+14083735458'
 
-  def perform
+  def perform(phone_number)
     data = {
       "from" => CALLER_NUM,
-      "to" => "7034709608",
-      "url" => BASE_URL + '/reminder',
+      "to" => "#{phone_number}",
+      "url" => "#{BASE_URL}/reminder",
     }
 
     client = Twilio::REST::Client.new(ENV["ACCOUNT_SID"], ENV["AUTH_TOKEN"])
     client.account.calls.create(data)
-    p "*" * 70
   end
 end

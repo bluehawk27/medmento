@@ -11,32 +11,34 @@ a = User.create(first_name: "Kevin", last_name: "Chen", email: "yolo@yolo.com")
   FrequencyPeriod.create(name: period)
 end
 
-# c = ClockworkEvent.create(
+
+# Doesn't work
+a = ClockworkEvent.create(
+      patient_name: "Grandpa",
+      drug_name: "Prozac",
+      message: "Love you!",
+      patient_number: "7034709608",
+      frequency_quantity: 90,
+      frequency_period_id: 1,
+  )
+
+# #  These work
+# b = ClockworkEvent.create(
 #       patient_name: "Grandpa",
 #       drug_name: "Prozac",
 #       message: "Love you!",
 #       patient_number: "111-111-1111",
-#       frequency_quantity: 90,
-#       frequency_period_id: 1
+#       frequency_quantity: 1,
+#       frequency_period_id: 4,
+#       at: "16:51"
 #   )
 
-
-b = ClockworkEvent.create(
-      patient_name: "Grandpa",
-      drug_name: "Prozac",
-      message: "Love you!",
-      patient_number: "111-111-1111",
-      frequency_quantity: 1,
-      frequency_period_id: 4,
-      at: "16:51"
-  )
-
-C = ClockworkEvent.create(
-      patient_name: "Grandma",
-      drug_name: "Prozac",
-      message: "Love you!",
-      patient_number: "111-111-1111",
-      frequency_quantity: 1,
-      frequency_period_id: 5,
-      at: "Tuesday 16:52"
-  )
+# C = ClockworkEvent.create(
+#       patient_name: "Grandma",
+#       drug_name: "Prozac",
+#       message: "Love you!",
+#       patient_number: "111-111-1111",
+#       frequency_quantity: 1,
+#       frequency_period_id: 5,
+#       at: "Tuesday 16:52"
+#   )

@@ -10,7 +10,7 @@ module Clockwork
   sync_database_events model: ClockworkEvent, every: 10.seconds do |model_instance|
 
     # if frequency == Time.now
-    TwilioWorker.perform_async#(model_instance.phone)
+    TwilioWorker.perform_async(model_instance.patient_number)
   end
 
 end
