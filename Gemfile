@@ -43,9 +43,6 @@ gem 'sidetiq'
 
 gem 'sinatra', '>= 1.3.0', :require => nil
 
-gem 'chronic'
-gem 'chronic_duration'
-
 # gem 'protected_attributes'
 
 # Use ActiveModel has_secure_password
