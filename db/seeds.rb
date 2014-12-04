@@ -13,7 +13,7 @@ end
 
 
 # Doesn't work
-a = ClockworkEvent.create(
+ClockworkEvent.create(
       patient_name: "Grandpa",
       drug_name: "Prozac",
       message: "Love you!",
@@ -22,23 +22,29 @@ a = ClockworkEvent.create(
       frequency_period_id: 1,
   )
 
-ClockworkEvent.create(
-      patient_name: "Grandpa",
-      drug_name: "Prozac",
-      message: "Love you!",
-      patient_number: "7034709608",
-      frequency_quantity: 90,
-      frequency_period_id: 1,
-  )
+10.times do
+  PainRating.create(rating: rand(10), clockwork_event_id: 1)
+end
 
-ClockworkEvent.create(
-      patient_name: "Grandpa",
-      drug_name: "Prozac",
-      message: "Love you!",
-      patient_number: "650-440-2013",
-      frequency_quantity: 90,
-      frequency_period_id: 1,
-  )
+# ClockworkEvent.create(
+#       patient_name: "Grandpa",
+#       drug_name: "Prozac",
+#       message: "Love you!",
+#       patient_number: "7034709608",
+#       frequency_quantity: 90,
+#       frequency_period_id: 1,
+#   )
+
+# ClockworkEvent.create(
+#       patient_name: "Grandpa",
+#       drug_name: "Prozac",
+#       message: "Love you!",
+#       patient_number: "650-440-2013",
+#       frequency_quantity: 90,
+#       frequency_period_id: 1,
+#   )
+
+
 
 # z = ClockworkEvent.create(
 #       patient_name: "Juan",
