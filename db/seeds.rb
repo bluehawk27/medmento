@@ -17,7 +17,25 @@ a = ClockworkEvent.create(
       patient_name: "Grandpa",
       drug_name: "Prozac",
       message: "Love you!",
+      patient_number: "504-491-6041",
+      frequency_quantity: 90,
+      frequency_period_id: 1,
+  )
+
+ClockworkEvent.create(
+      patient_name: "Grandpa",
+      drug_name: "Prozac",
+      message: "Love you!",
       patient_number: "7034709608",
+      frequency_quantity: 90,
+      frequency_period_id: 1,
+  )
+
+ClockworkEvent.create(
+      patient_name: "Grandpa",
+      drug_name: "Prozac",
+      message: "Love you!",
+      patient_number: "650-440-2013",
       frequency_quantity: 90,
       frequency_period_id: 1,
   )
