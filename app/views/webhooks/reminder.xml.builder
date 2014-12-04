@@ -1,6 +1,8 @@
 xml.instruct!
 xml.Response do
   xml.Gather(:action => @post_to, :numDigits => 1) do
+    xml.Play 'http://kchens.github.io/sounds/TaylorSwiftCall.mp3'
+    xml.Pause :length => 1
     xml.Say "Hello #{@event.patient_name}, Taylor Swift loves you wanted to say: #{@event.message}.", voice: 'alice'
     xml.Pause :length => 1
     xml.Say "She also ask that you take your #{@event.drug_name} today.", voice: 'alice'
