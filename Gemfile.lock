@@ -37,9 +37,6 @@ GEM
       xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    chronic (0.10.2)
-    chronic_duration (0.10.6)
-      numerizer (~> 0.1.1)
     clockwork (1.1.0)
       activesupport
       tzinfo
@@ -84,7 +81,6 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
-    numerizer (0.1.1)
     pg (0.17.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -210,8 +206,6 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  chronic
-  chronic_duration
   clockwork
   coffee-rails (~> 4.0.0)
   dotenv-rails
