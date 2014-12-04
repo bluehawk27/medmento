@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'faker',        group: :development
 gem 'pry',        group: :development
 gem 'rspec-rails'
+gem 'simplecov', :require => false, :group => :test
 gem 'capybara'
 gem 'shoulda-matchers'
 gem 'factory_girl'
@@ -36,6 +37,9 @@ gem 'rails_12factor'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'clockwork'
 gem 'twilio-ruby'
+group :test do
+  gem "rspec-sidekiq"
+end
 
 gem 'sidekiq'
 gem 'redis'
